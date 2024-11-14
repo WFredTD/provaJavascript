@@ -1,0 +1,11 @@
+<script>
+    /*
+    Elaborar um programa para uma pizzaria, o qual leia o valor total de uma conta e quantos 
+    clientes vão pagá-la. Calcule e informe o valor a ser pago por ser cliente.
+    */
+
+    const conta = parseFloat(prompt("Digite o valor da conta: ").replace("," , "."))
+    const qtdCliente = Number(prompt("Digite a quantidade de clientes: "))
+
+    alert(`Cada cliente irá pagar ${parseFloat((conta / qtdCliente).toFixed(2))}`)
+</script>

@@ -1,0 +1,12 @@
+<script>
+    /*
+    Elaborar um programa para uma loja, o qual leia o preço de um produto e informe as opções
+    de pagamento da loja. Calcule e informe o valor para pagamento à vista com 10% de  desconto
+    e o valor em 3x.
+    */
+
+    const valorProduto = parseFloat(prompt("Digite o valor do produto: ").replace("," , "."))
+    const desconto = parseFloat((valorProduto*0.1).toFixed(2))
+
+    alert(`Para pagamento a vista: R$${valorProduto-desconto}\nPara pagamento parcelado: 3x de R$${(valorProduto / 3).toFixed(2)}`)
+</script>

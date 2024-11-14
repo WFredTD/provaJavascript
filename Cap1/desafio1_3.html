@@ -1,0 +1,28 @@
+<script>
+    /*
+    Crie uma fórmula que  comprove se um triângulo é retângulo.
+    Exemplo: como comprovar se um triângulo é retângulo?
+
+    Um triângulo apresenta os lados com medidas 5 cm, 12 cm e 13 cm.
+
+    Como saber se é um triângulo retângulo?
+
+    Para provar que um triângulo retângulo é verdadeiro as medidas dos
+    seus lados devem obedecer ao Teorema de Pitágoras.
+
+    Como as medidas dadas satisfazem o teorema de Pitágoras, ou seja,
+    o quadrado da hipotenusa é igual a soma do quadrado dos catetos,
+    então podemos dizer que o triângulo é retângulo
+    */
+
+    const cateto1 = Number(prompt("Digite o valor do primeiro cateto"))
+    const cateto2 = Number(prompt("Digite o valor do segundo cateto"))
+    const hipotenusa = parseFloat(Math.sqrt((cateto1*cateto1)+(cateto2*cateto2)))
+    /*function ehTriRetangulo(){
+
+        
+        
+        return hipotenusa
+    }*/
+    alert(hipotenusa)
+</script>

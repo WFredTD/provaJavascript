@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1_1</title>
+</head>
+<body>
+    <script>
+        /*
+        Crie um algoritmo que leia o valor total de uma conta,
+        calcula o valor individual por cliente e exibe a resposta
+        por cliente com duas casas decimais.
+        
+        Se o cliente faz aniversário no dia da compra (considere a data atual)
+        então ele não paga a parte dele, o grupo que divide a conta.
+        */
+    
+    
+        let conta = parseFloat(prompt("Digite o valor da conta: ").replace("," , "."))
+        let qtdCliente = Number(prompt("Digite a quantidade de clientes: "))
+        const dataAniversario = prompt("Digite a data do seu aniversário: ")
+
+        const partesAniversario = dataAniversario.split("/")
+        const aniversario = new Date(partesAniversario[2], partesAniversario[1] - 1, partesAniversario[0])
+
+        const data = new Date()
+
+        let clientePaga = conta
+
+        if (aniversario.getDate() === data.getDate() && aniversario.getMonth() === data.getMonth() && qtdCliente > 1){
+            clientePaga = conta / qtdCliente
+            alert(`Cada cliente irá pagar ${clientePaga.toFixed(2)} com exceção do aniversariante, totalizando ${conta-clientePaga.toFixed(2)}`)
+        } else{
+            alert(`Cada cliente irá pagar R$${(clientePaga/qtdCliente).toFixed(2)}, totalizando R$${conta.toFixed(2)}`)
+        }
+    </script>
+</body>
+</html>
+

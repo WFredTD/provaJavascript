@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7</title>
+</head>
+
+<body>
+
+    <script>
+    /*     
+    Joaquim é dono do Restaurante Maria's Bar
+    Ele precisa de um algoritmo que
+    -Leia o valor do jantar
+    -Calcule a gorjeta do garçom
+    -Calcule o valor total
+    -Mostre a Taxa do Garçom e o valor total     
+   */
+        const valor = parseFloat(prompt("Digite o valor do jantar: ").replace("," , "."))
+        const gorjeta = parseFloat((valor * 0.1).toFixed(2))
+        const total = parseFloat((valor + gorjeta).toFixed(2))
+        console.log(typeof valor)
+        console.log(typeof gorjeta)
+        console.log(typeof total)
+        //console.log(typeof soma)
+        /*f strings é template strigs no javascripts*/
+        alert(`O total é de R$${total}, sendo que R$${gorjeta} é a gorjeta do garçom.`)
+    </script>
+</body>
+</html>

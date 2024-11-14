@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1_2</title>
+</head>
+<body>
+    <script>
+        /*
+        Considere peso 1, peso 2, peso 3. Calcule a média ponderada de três notas de um aluno. 
+        */
+    
+        
+        const nota1 = parseFloat(prompt("Digite a primeira nota: ").replace("," , "."))
+        const nota2 = parseFloat(prompt("Digite a segunda nota: ").replace("," , "."))
+        const nota3 = parseFloat(prompt("Digite a terceira nota: "). replace("," , "."))
+        const media = parseFloat(((nota1 + (nota2*2) + (nota3*3))/6).toFixed(2))
+
+        alert(`A média das notas é ${media}`)
+
+        if(media >= 7){
+            alert("Você conseguiu a nota nescessária, parabéns! ")
+        } else{
+            alert("Infelizmente você reprovou.\nTente novamente no proximo ano.")
+        }
+    </script>
+</body>
+</html>
